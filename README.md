@@ -1,10 +1,17 @@
-# idiom_puzzle
+# 成語拼圖 (idiom_puzzle)
 
-這是一個使用 Flutter 開發的成語拼圖遊戲專案。
+這是一個使用 Flutter 開發的專業成語拼圖遊戲。
 
 ## 專案簡介
 
-玩家需要從提供的漢字網格中，選出正確的字元來組成成語。
+玩家需要從提供的漢字網格中，選出正確的字元來組成成語。遊戲名稱已正式定為「**成語拼圖**」。
+
+## 畫面展示
+
+| 新中式 (傳統) | 科技暗色 | 卡通可愛 |
+| :---: | :---: | :---: |
+| ![新中式風格](https://via.placeholder.com/200x400?text=Traditional+Style) | ![科技暗色風格](https://via.placeholder.com/200x400?text=Cyber+Style) | ![卡通可愛風格](https://via.placeholder.com/200x400?text=Cartoon+Style) |
+| *典雅古風* | *酷炫未來* | *活潑動漫* |
 
 ## 功能特色
 
@@ -30,7 +37,10 @@
 ## 技術規格 (開發者資訊)
 
 - **自動化建置**：APK 與 AAB 產出時會自動包含版本號與日期，並統一輸出至 `build/app/outputs/final/`。
-- **發布準備**：已配置完整的簽名金鑰 (Keystore) 流程與自定義 Application ID (`com.paddyliu.idiom_puzzle`)。
+- **發布準備**：
+  - 已配置完整的簽名金鑰 (Keystore) 流程。
+  - 使用正式 Application ID (`com.paddyliu.idiom_puzzle`)。
+  - 已解決 Google Play 升級限制錯誤 (versionCode 已遞增)。
 - **版本管理**：UI 版本號自動與 `pubspec.yaml` 保持同步。
 
 ## 如何執行
