@@ -13,8 +13,7 @@ https://groups.google.com/g/idiom_puzzle
 2. APP store 下載位置
 https://play.google.com/store/apps/details?id=com.paddyliu.idiom_puzzle
 
-3. 透過網路加入測試
-測試人員可透過網路加入您的測試
+3. 透過網路加入測試，測試人員可透過網路加入您的測試
 https://play.google.com/apps/testing/com.paddyliu.idiom_puzzle
 
 ## 畫面展示
