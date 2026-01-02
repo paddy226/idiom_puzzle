@@ -6,6 +6,17 @@
 
 玩家需要從提供的漢字網格中，選出正確的字元來組成成語。遊戲名稱已正式定為「**成語拼圖**」。
 
+## 協助測試
+1. 加入討論群組 (加入才能取得下載權限)
+https://groups.google.com/g/idiom_puzzle
+
+2. APP store 下載位置
+https://play.google.com/store/apps/details?id=com.paddyliu.idiom_puzzle
+
+3. 透過網路加入測試
+測試人員可透過網路加入您的測試
+https://play.google.com/apps/testing/com.paddyliu.idiom_puzzle
+
 ## 畫面展示
 
 | 新中式 (傳統) | 科技暗色 | 卡通可愛 |
@@ -34,17 +45,3 @@
 - **持久化設定**：自動儲存玩家選用的風格主題、音效開關、難度偏好。
 - **豐富成語資料庫**：包含超過 240 條精選成語，具備直式注音顯示與詳細釋義。
 
-## 技術規格 (開發者資訊)
-
-- **自動化建置**：APK 與 AAB 產出時會自動包含版本號與日期，並統一輸出至 `build/app/outputs/final/`。
-- **發布準備**：
-  - 已配置完整的簽名金鑰 (Keystore) 流程。
-  - 使用正式 Application ID (`com.paddyliu.idiom_puzzle`)。
-  - 已解決 Google Play 升級限制錯誤 (versionCode 已遞增)。
-- **版本管理**：UI 版本號自動與 `pubspec.yaml` 保持同步。
-
-## 如何執行
-
-1. 確保已安裝 Flutter SDK。
-2. 執行 `flutter pub get` 下載依賴套件。
-3. 執行 `flutter run` 啟動專案。
