@@ -10,7 +10,7 @@
 
 | 新中式 (傳統) | 科技暗色 | 卡通可愛 |
 | :---: | :---: | :---: |
-| ![新中式風格](https://via.placeholder.com/200x400?text=Traditional+Style) | ![科技暗色風格](https://via.placeholder.com/200x400?text=Cyber+Style) | ![卡通可愛風格](https://via.placeholder.com/200x400?text=Cartoon+Style) |
+| ![新中式風格](assets/image/mobile-1.png) | ![科技暗色風格](assets/image/mobile-5.png) | ![卡通可愛風格](assets/image/mobile-4.png) |
 | *典雅古風* | *酷炫未來* | *活潑動漫* |
 
 ## 功能特色
