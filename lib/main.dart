@@ -958,6 +958,46 @@ class _IdiomPuzzleHomePageState extends State<IdiomPuzzleHomePage> with WidgetsB
     );
   }
 
+  Future<void> _confirmStartNewGame(bool isChallenge) async {
+    bool hasSave = isChallenge ? _hasChallengeSave : _hasCasualSave;
+    
+    if (!hasSave) {
+      _startGame(isChallenge: isChallenge);
+      return;
+    }
+
+    _triggerFeedback();
+    final bool? shouldStart = await showDialog<bool>(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('開始新遊戲？'),
+          content: const Text('偵測到已有遊戲紀錄。\n開始新遊戲將會覆蓋目前的進度，確定要繼續嗎？'),
+          actions: <Widget>[
+            TextButton(
+              child: const Text('取消'),
+              onPressed: () {
+                _triggerFeedback();
+                Navigator.of(context).pop(false);
+              },
+            ),
+            TextButton(
+              child: const Text('確定'),
+              onPressed: () {
+                _triggerFeedback();
+                Navigator.of(context).pop(true);
+              },
+            ),
+          ],
+        );
+      },
+    );
+
+    if (shouldStart == true) {
+      _startGame(isChallenge: isChallenge);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     bool isTech = widget.currentStyle == AppThemeStyle.tech;
@@ -1048,7 +1088,7 @@ class _IdiomPuzzleHomePageState extends State<IdiomPuzzleHomePage> with WidgetsB
               const SizedBox(height: 60),
               _buildMenuButton(
                 label: '挑戰模式',
-                onPressed: () => _startGame(isChallenge: true),
+                onPressed: () => _confirmStartNewGame(true),
                 icon: Icons.timer,
                 color: const Color(0xFFD84315),
                 showContinue: _hasChallengeSave,
@@ -1057,7 +1097,7 @@ class _IdiomPuzzleHomePageState extends State<IdiomPuzzleHomePage> with WidgetsB
               const SizedBox(height: 20),
               _buildMenuButton(
                 label: '休閒模式',
-                onPressed: () => _startGame(isChallenge: false),
+                onPressed: () => _confirmStartNewGame(false),
                 icon: Icons.spa,
                 color: const Color(0xFF2E7D32),
                 showContinue: _hasCasualSave,
